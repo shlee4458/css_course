@@ -1,0 +1,24 @@
+html {
+    font-family: monospace;
+}
+
+.gray {
+    color: gray;
+}
+
+body {
+    font-size: 15px;
+}
+
+h1, h2 {
+    color: blue;
+}
+
+p {
+    color: red;
+}
+
+.highlight {
+    text-transform: uppercase;
+    background-color: yellow;
+}

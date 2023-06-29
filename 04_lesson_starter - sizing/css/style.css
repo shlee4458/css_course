@@ -1,0 +1,38 @@
+/* for font - use rem */
+/* for padding/margin maybe use em to the font*/
+/* use % instead of vw*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    width: 50%;
+}
+
+body {
+    min-height: 100vh;
+}
+
+
+h1 {
+    border: 2px dashed red; /* absolute*/
+    font-size: 3rem;
+    padding: 1em;
+    width: 50%; /**/
+}
+
+main {
+    width: 50vw;
+    font-size: 2rem; /* relative to root element's size - html set by browser - 16*/
+    background-color: aqua;
+}
+
+p {
+    font-size: 1.2em; /* relative to the element - 2rem * 1.2*/
+    width: 10ch;
+}
