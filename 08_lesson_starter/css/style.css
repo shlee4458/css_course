@@ -5,3 +5,38 @@ body {
   font-size: 2rem;
   font-family: "Roboto", sans-serif;
 }
+
+/* ol {
+  list-style-type: upper-roman;
+} */
+
+ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul {
+  color: blue;
+  line-height: 1.6;
+  text-align:center;
+  
+  /* list style... */
+  list-style-type: square;
+  list-style-position: inside;
+  /* list-style-image: url("../images/checkmark.png"); */
+  /* this aggregates all style- into a single line */
+  /* list-style: square url("../images/checkmark.png") inside; */
+}
+
+ul li:nth-child(odd) { 
+  /* this will select li in the ul only */
+  color: red;
+}
+
+/* Pseudo element */
+ul ::marker {
+  color: red;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  content: "Hello >>>   ";
+}
