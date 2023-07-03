@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Lobster&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  min-height: 200vh;
+}
+
+.outer-container {
+  border: 3px dashed #000;
+  width: 75vw;
+  height: 85vh;
+  margin: 40px auto;
+  position: relative;
+}
+
+.inner-container {
+  border: 2px solid #00f;
+  width: 40vw;
+  height: 50vh;
+  margin: 200px auto;
+  /* position: relative; */
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  color: #fff;
+  padding: 1rem;
+}
+
+.absolute {
+  /* RELATIVE TO THE CLOSEST RELATIVE: position absolute looks for a parent element with relative position
+    it will be in the absolute position as the anchor to the closest ancestor
+    with position set as relative
+   */
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: blue;
+
+  /* allow to stay on the top always */
+  z-index: 1;
+}
+
+.relative {
+  /* RELATIVE TO IMMEDIATE PARENT: the position will be always relative to its immediate parent container 
+  */
+  position: relative;
+  top: 300px;
+  left: 100px;
+
+  background-color: rebeccapurple;
+
+}
+
+.fixed {
+  /* RELATIVE TO VIEWPORT: Unlike absolute positioning, regardless of the existence of ancestor's 
+  relative positioning, this will always be positioned relative to the
+  html viewport */
+  position: fixed;
+  top: 100px;
+  
+
+  /* background-color: darkgreen; */
+}
+
+.sticky {
+  /* STICKS AT THE TOP FOR AWHILE */
+  position: sticky;
+  top: 10px;
+
+  background-color: brown;
+}
+
+/* tip: use absolute positioning and left: -10000 to move outside the view */
+
+section {
+  height: 100vh;
+}
+
+.blue { background-color: blue;}
+.red { background-color: red;}
+.green { background-color: green;}
+
+header, footer {
+  color: white;
+  text-align: center;
+  font-size: 5rem;
+  height: 100px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+}
+
+footer {
+  background-color: black;
+  font-size: 3rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+a:visited {
+  color: white;
+}
+
+.social {
+  background-color: royalblue;
+  color: white;
+  font-size: inherit;
+  padding: 1rem;
+  position: fixed;
+  top: 30%;
+  left: 0;
+  z-index: 1;
+}
+
+html {
+  scroll-behavior: smooth;
+}

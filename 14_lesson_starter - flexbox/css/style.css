@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/* 
+FLEX attributes
+justify-content: MULTIPLE COLS -- HORIZONTALLY
+align-items: SINGLE ITEM VERTICAL 
+align-content: MULTIPLE ROWS -- VERTICALLY 
+
+align-direction: row/col/row-reverse/col-reverse
+align-wrap: wrap/nowrap/reverse-wrap
+@shorthand : align-flow: row wrap
+
+FLEX-ITEM attributes
+order: -1 0 1
+flex-grow
+flex-shrink
+flex-basis
+@shorthand: flex: 1 1 150px
+
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  min-height: 400px;
+  margin-inline: auto;
+  border: 1px solid #000;
+  /* box will take vertically, and set its child as
+  flex child instances */
+  display: flex;
+  /* gap: 1rem; */
+
+  /* horizontal alignment */
+  justify-content: space-evenly; 
+
+  /* vertical alignment */
+  align-items: flex-start;
+
+  /* horizontal stacking alignment 
+  setting it to column changes justify-content <-> align-items */
+  flex-direction: row;
+  flex-direction: row-reverse;
+  
+  /* this will create additional row if it overflows */
+  flex-wrap: wrap;
+
+  /* aggregate flex-direction and flex-wrap */
+  flex-flow: row wrap;
+
+  /* algins row, while justify-content will align column */
+  align-content: space-around;
+} 
+
+.box {
+  min-width: 100px;
+  height: 100px;
+  background-color: #000;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem;
+
+  /* flex item can itself be a flexbox, making its contained element a flex item */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* sets the basis of the flex item if the flex item's width is not set */
+  flex-basis: 100px;
+
+  /* grow to fill the container */
+  flex-grow: 1;  
+  flex-shrink: 1;
+
+  /* shorthand for flex grow, shrink, basis */
+  flex: 1 1 100px;
+}
+
+.box:nth-child(2) {
+  flex: 2 2 100px;
+  order: 4;
+}
