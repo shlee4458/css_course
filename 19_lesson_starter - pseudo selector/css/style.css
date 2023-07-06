@@ -53,14 +53,24 @@ nav {
   justify-content: space-evenly;
 }
 
-nav a,
-nav a:visited {
+
+/* if it is visited or not visited */
+nav a:any-link {
   color: #000;
 }
+  /* nav a,
+  nav a:visited {
+    color: #000;
+  } */
 
-nav a:hover,
-nav a:focus {
+/* if is hover or focus */
+nav :is(a:hover, nav a:focus) {
   color: hsla(0, 0%, 20%, 0.6);
+}
+
+/* pseudo class */
+nav a:active {
+  color: red;
 }
 
 main {
@@ -89,6 +99,12 @@ footer {
   align-items: center;
 }
 
+
+/* last clicked is the target */
+.card:target {
+  border: solid 2px purple;
+}
+
 .card figure {
   display: flex;
   flex-flow: column nowrap;
@@ -99,11 +115,48 @@ footer {
   border-radius: 50%;
 }
 
+/* attribute selector */
+/* any img element inside card class with(out) attribute alt */
+.card img:not([alt]) {
+  border: red 10px solid;
+}
+
+/* nth child */
+.card:nth-child(odd) {
+  background-color: papayawhip;
+}
+
 .card figcaption {
   font-weight: bolder;
   font-size: 2rem;
   margin: 1rem;
   text-align: center;
+}
+
+/* add hello at the end of the caption name */
+.card figcaption::before {
+  content: 'hello';
+  display: block;
+}
+
+.card p {
+  position: relative;
+}
+
+.card p::before {
+  content: open-quote;
+  font-size: 3em;
+  position: absolute;
+  top: -0.25em;
+  left: -0.5em;
+}
+
+.card p::after {
+  content: close-quote;
+  font-size: 3em;
+  position: absolute;
+  top: -0.25em;
+  left: -0.5em;
 }
 
 /* || SMALL */
