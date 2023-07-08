@@ -107,7 +107,7 @@ footer {
 @media (prefers-color-sheme: blue) {
   :root {
     /* FONT */
-    --FF: "Nunito", sans-serif;
+    --FF: "Nunito", sans-seri f;
     --FS: 1.5rem;
     --FS-XL: 3rem;
   
