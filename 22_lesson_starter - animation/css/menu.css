@@ -69,7 +69,6 @@ header {
     transform: translate(-20px, 12px);
 }
 
-
 :is(header:hover, header:focus-within) .menu-icon {
     background-color: transparent;
     transform: rotate(720deg);
